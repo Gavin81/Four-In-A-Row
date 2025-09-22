@@ -54,7 +54,7 @@ class Token {
      */
     moveRight(columns) {
         if (this.columnLocation < columns - 1) {
-            console.log(this.offsetLeft);
+            //console.log(this.offsetLeft);
             this.htmlToken.style.left = this.offsetLeft + 76;
             //this.htmlToken.style.left = (this.columnLocation + 1) * 76;
             this.columnLocation += 1;
