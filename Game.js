@@ -3,9 +3,11 @@ class Game {
         this.board = new Board();
         this.players = this.createPlayers();
         this.ready = false;
+        //this.game = this.startGame();
     }
     
     
+
     /** 
      * Returns active player.
      * @return  {Object}    player - The active player.
@@ -15,6 +17,7 @@ class Game {
 	}
     
     
+
     /** 
      * Creates two player objects
      * @return  {array}    An array of two player objects.
@@ -26,6 +29,7 @@ class Game {
     }
     
     
+
     /** 
      * Initializes game. 
      */
@@ -36,6 +40,7 @@ class Game {
     }
 	
 	
+
     /**
 	 * Branches code, depending on what key player presses
 	 * @param	{Object}	e - Keydown event object
@@ -52,6 +57,7 @@ class Game {
         }
     }
     
+
 
     /**
      * Finds Space object to drop Token into, drops Token
@@ -79,6 +85,7 @@ class Game {
     }
 
 
+
     /** 
      * Updates game state after token is dropped. 
      * @param   {Object}    token - The token that's being dropped.
@@ -104,6 +111,7 @@ class Game {
     }
 
     
+
     /** 
      * Checks if there a winner on the board after each token drop.
      * @param   {Object}    target - Targeted space for dropped token.
@@ -130,6 +138,7 @@ class Game {
             }
         }
 	
+
     	// horizontal
     	for (let x = 0; x < this.board.columns - 3; x++ ){
             for (let y = 0; y < this.board.rows; y++){
@@ -142,6 +151,7 @@ class Game {
             }
         }
 		
+
     	// diagonal
     	for (let x = 3; x < this.board.columns; x++ ){
             for (let y = 0; y < this.board.rows - 3; y++){
@@ -154,6 +164,7 @@ class Game {
             }
         }
 	
+
     	// diagonal
     	for (let x = 3; x < this.board.columns; x++ ){
             for (let y = 3; y < this.board.rows; y++){
@@ -170,6 +181,7 @@ class Game {
     }
 
 
+
     /** 
      * Switches active player. 
      */
@@ -179,6 +191,7 @@ class Game {
 		}
     }
     
+
 
     /** 
      * Displays winner info.

@@ -20,6 +20,7 @@ class Space {
         }
 	}
     
+
     /**
      * Draws SVG space
      */
@@ -32,7 +33,7 @@ class Space {
         svgSpace.setAttributeNS(null, "fill", "black");
         svgSpace.setAttributeNS(null, "stroke", "none");
 
-        document.getElementById("mask").appendChild(svgSpace);     
+        document.getElementById("mask").appendChild(svgSpace);
     }
     
     
