@@ -120,20 +120,20 @@ class Game {
     checkForWin(target){
     	const owner = target.token.owner;
     	let win = false;
-		console.log('checkforwin called');
+		// console.log('checkforwin called');
     	// vertical
     	for (let x = 0; x < this.board.columns; x++ ){
             for (let y = 0; y < this.board.rows - 3; y++){
-				console.log(x,y);
-				console.log(y+1);
-				console.log(y+2);
-				console.log(y+3);
+				// console.log(x,y);
+				// console.log(y+1);
+				// console.log(y+2);
+				// console.log(y+3);
                 if (this.board.spaces[x][y].owner === owner && 
     				this.board.spaces[x][y+1].owner === owner && 
     				this.board.spaces[x][y+2].owner === owner && 
     				this.board.spaces[x][y+3].owner === owner) {
                     	win = true;
-						console.log(win);
+						// console.log(win);
                 }           
             }
         }
